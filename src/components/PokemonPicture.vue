@@ -11,6 +11,8 @@
 </template>
 
 <script>
+
+
 export default {
   props: {
     pokemonId: {
@@ -32,7 +34,7 @@ export default {
     imgSrc() {
       return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.pokemon}.svg`;
     },
-  },
+  }
 };
 </script>
 
@@ -42,19 +44,18 @@ export default {
 }
 
 .pokemon-container {
-  height: 200px;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 img {
-  height: 200px;
+  width: 150px;
+  height: 150px;
   position: absolute;
-  left: 50%;
   user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
-  transform: translateX(-50%);
 }
 </style>

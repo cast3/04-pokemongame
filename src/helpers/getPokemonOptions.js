@@ -9,7 +9,7 @@ const getPokemons = () => {
     for (let index = 0; index < 4; index++) {
         let pokid = 0;
         do {
-            pokid = getRandomInt(1, 650);
+            pokid = getRandomInt(1, 649);
         } while (pokemons.includes(pokid));
         pokemons.push(pokid);
     }
@@ -18,10 +18,10 @@ const getPokemons = () => {
 
 const getPokemonNames = async ([ a, b, c, d ] = []) => {
     const priomiseArr = [
-        PokeApi.get(`${a}`),
-        PokeApi.get(`${b}`),
-        PokeApi.get(`${c}`),
-        PokeApi.get(`${d}`),
+        PokeApi.get(`${a}`, { cache: false }),
+        PokeApi.get(`${b}`, { cache: false }),
+        PokeApi.get(`${c}`, { cache: false }),
+        PokeApi.get(`${d}`, { cache: false }),
     ];
 
     const [ p1, p2, p3, p4 ] = await Promise.all(priomiseArr);

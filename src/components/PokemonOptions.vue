@@ -24,26 +24,31 @@ export default {
 
 <style scoped>
 ul {
-  list-style-type: none;
-  margin: 20px 0 0 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 90px 90px;
+  grid-gap: 40px;
   padding: 0;
+  margin: 30px auto;
 }
 
 li {
   background-color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  margin-bottom: 10px;
-  width: 250px;
+  text-align: center;
+  line-height: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: -10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 li:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
-
-.options-container {
-  display: flex;
-  justify-content: center;
+li:after {
+  background-color: rgba(255, 0, 0, 0.05);
 }
 </style>
