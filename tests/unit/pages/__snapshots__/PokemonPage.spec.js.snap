@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonPage component Debe hacer match con el snapshot 1`] = `
+<div class="tittle"><img src="https://fontmeme.com/permalink/221112/3fdbade8fff9ad03a3465b0dad7b0d72.png" alt="Cuál es este"><img src="https://fontmeme.com/permalink/221112/341ce90b56dacc3167dd14cfaf3ad0e3.png" alt="Pokemon" srcset=""><img src="https://fontmeme.com/permalink/221112/68001c019c01f13c3c58112a55b6c2da.png" alt="?" srcset=""></div>
+<div>
+  <!--v-if-->
+</div>
+<loading-stub class="loader"></loading-stub>
+`;
+
+exports[`PokemonPage component Debe hacer match con el snapshot cuando cargan los pokemons 1`] = `
+<div class="tittle"><img src="https://fontmeme.com/permalink/221112/3fdbade8fff9ad03a3465b0dad7b0d72.png" alt="Cuál es este"><img src="https://fontmeme.com/permalink/221112/341ce90b56dacc3167dd14cfaf3ad0e3.png" alt="Pokemon" srcset=""><img src="https://fontmeme.com/permalink/221112/68001c019c01f13c3c58112a55b6c2da.png" alt="?" srcset=""></div>
+<div>
+  <!--v-if-->
+</div>
+<main class="container no-draw">
+  <article class="card no-draw"><img src="" alt="Background" class="card-header">
+    <div class="card-body">
+      <div class="card-body-contentimg">
+        <pokemon-picture-stub pokemonid="4" showpokemon="false" class="card-body-contentimg-img"></pokemon-picture-stub>
+      </div>
+      <!--v-if-->
+      <p>Colecionable</p>
+    </div>
+    <div class="card-footer">
+      <div class="card-footer-options">
+        <pokemon-options-stub pokemons="[object Object],[object Object],[object Object],[object Object]"></pokemon-options-stub>
+      </div>
+    </div>
+  </article>
+  <!--v-if-->
+</main>
+`;

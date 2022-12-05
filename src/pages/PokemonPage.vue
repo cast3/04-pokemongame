@@ -77,12 +77,13 @@ export default {
     checkAnswer(pokId) {
       this.showPokemon = true;
       this.showAnswer = true;
-      const { id, name } = this.pokemon;
+      const { id } = this.pokemon;
       if (pokId === id) {
         this.message = `Correcto!`;
       } else {
         this.message = `Incorrecto!`;
       }
+
     },
     newGame() {
       Object.assign(this.$data, this.$options.data());

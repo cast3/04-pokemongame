@@ -1,10 +1,10 @@
-import PokeApi from "@/API/pokemonApi";
+import PokeApi from "@/api/pokemonApi";
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-const getPokemons = () => {
+export const getPokemons = () => {
     let pokemons = [];
     for (let index = 0; index < 4; index++) {
         let pokid = 0;
@@ -16,7 +16,7 @@ const getPokemons = () => {
     return pokemons;
 };
 
-const getPokemonNames = async ([ a, b, c, d ] = []) => {
+export const getPokemonNames = async ([ a, b, c, d ] = []) => {
     const priomiseArr = [
         PokeApi.get(`${a}`, { cache: false }),
         PokeApi.get(`${b}`, { cache: false }),
