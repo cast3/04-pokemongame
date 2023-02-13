@@ -2,44 +2,69 @@
 	<div class="tittle">
 		<img
 			src="https://fontmeme.com/permalink/221112/3fdbade8fff9ad03a3465b0dad7b0d72.png"
-			alt="Cuál es este" />
+			alt="Cuál es este"
+		/>
 		<img
 			src="https://fontmeme.com/permalink/221112/341ce90b56dacc3167dd14cfaf3ad0e3.png"
 			alt="Pokemon"
-			srcset="" />
+			srcset=""
+		/>
 		<img
 			src="https://fontmeme.com/permalink/221112/68001c019c01f13c3c58112a55b6c2da.png"
 			alt="?"
-			srcset="" />
+			srcset=""
+		/>
 	</div>
 	<div>
-		<h2 v-if="showAnswer" class="answer">{{ message }}</h2>
+		<h2
+			v-if="showAnswer"
+			class="answer"
+		>
+			{{ message }}
+		</h2>
 	</div>
 
-	<loading v-if="!pokemon" class="loader" />
-	<main v-else="pokemon" class="container no-draw">
+	<loading
+		v-if="!pokemon"
+		class="loader"
+	/>
+	<main
+		v-else="pokemon"
+		class="container no-draw"
+	>
 		<article class="card no-draw">
 			<img
 				src="@/assets/rose-petals.svg"
 				alt="Background"
-				class="card-header" />
+				class="card-header"
+			/>
 			<div class="card-body">
 				<div class="card-body-contentimg">
 					<PokemonPicture
 						:pokemonId="pokemon.id"
 						:showPokemon="showPokemon"
-						class="card-body-contentimg-img" />
+						class="card-body-contentimg-img"
+					/>
 				</div>
-				<div v-if="showPokemon" class="card-body-text">
+				<div
+					v-if="showPokemon"
+					class="card-body-text"
+				>
 					<h1>
 						{{ pokemon.name }} #<span>{{ pokemon.id }}</span>
 					</h1>
 				</div>
 				<p>Colecionable</p>
 			</div>
-			<div v-if="!showPokemon" class="card-footer">
+			<div
+				v-if="!showPokemon"
+				class="card-footer"
+			>
 				<div class="card-footer-options">
-					<PokemonOptions :pokemons="pokemonArr" @selection="checkAnswer" />
+					<PokemonOptions
+						:pokemons="pokemonArr"
+						@selection="checkAnswer"
+					/>
 				</div>
 			</div>
 		</article>
@@ -47,15 +72,16 @@
 			v-if="showPokemon"
 			class="new-game"
 			@click="newGame"
-			value="Nuevo juego" />
+			value="Nuevo juego"
+		/>
 	</main>
 </template>
 
 <script>
-	import PokemonOptions from "@/components/PokemonOptions.vue";
-	import PokemonPicture from "@/components/PokemonPicture.vue";
-	import getPokemonOptions from "@/helpers/getPokemonOptions";
-	import loading from "@/helpers/CustomLoader.vue";
+	import PokemonOptions from '@/components/PokemonOptions.vue';
+	import PokemonPicture from '@/components/PokemonPicture.vue';
+	import getPokemonOptions from '@/helpers/getPokemonOptions';
+	import loading from '@/helpers/CustomLoader.vue';
 
 	export default {
 		components: { PokemonOptions, PokemonPicture, loading },
